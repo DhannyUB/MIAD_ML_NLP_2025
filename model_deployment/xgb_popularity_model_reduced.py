@@ -8,7 +8,7 @@ import numpy as np
 
 # 1. Cargar el modelo XGBoost entrenado
 try:
-    xgb_model = joblib.load('xgb_popularity_model.pkl')
+    xgb_model = joblib.load('xgb_popularity_model_reduced.pkl')
 except FileNotFoundError:
     print("Error: No se encontró el archivo del modelo XGBoost (xgb_popularity_model.pkl). Asegúrate de que esté en el mismo directorio o proporciona la ruta correcta.")
     exit()
