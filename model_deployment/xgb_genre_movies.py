@@ -160,7 +160,10 @@ class MovieGenrePrediction(Resource):
             }, 200
 
         except Exception as e:
+            import traceback
+            traceback.print_exc()  
             return {'message': f'Error predicting: {str(e)}'}, 500
+
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=False, host='0.0.0.0', port=5000)
