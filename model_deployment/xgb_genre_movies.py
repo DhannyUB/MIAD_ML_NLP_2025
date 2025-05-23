@@ -162,8 +162,8 @@ class MovieGenrePrediction(Resource):
             }, 200
 
         except Exception as e:
-            import traceback
-            traceback.print_exc()  
+            #import traceback
+            #traceback.print_exc()  
             return {'message': f'Error predicting: {str(e)}'}, 500
 
 
