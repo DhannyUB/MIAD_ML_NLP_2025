@@ -147,10 +147,12 @@ class MovieGenrePrediction(Resource):
             highest_probability_genre = next(iter(sorted_probabilities))
             highest_probability = sorted_probabilities[highest_probability_genre]
 
+
             interpretation = (
-                f"The movie is most likely of the '{highest_probability_genre}' genre "
+                f"The genre of the movie is most likely '{highest_probability_genre}' "
                 f"with a probability of {highest_probability:.0%}."
             )
+
 
             return {
                 #'highest_probability_genre': highest_probability_genre,
